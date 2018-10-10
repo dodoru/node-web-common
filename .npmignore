@@ -1,0 +1,7 @@
+.idea
+.git
+tmp
+*/bak/*
+*.log
+
+
