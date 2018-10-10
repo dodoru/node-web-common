@@ -1,4 +1,6 @@
-const pbkdf2 = require('./lib/pbkdf2');
+const lib = require('./lib');
+const index = require('./index');
+const pbkdf2 = lib.pbkdf2;
 
 // used for testing
 function test_bkdf2() {
@@ -18,5 +20,27 @@ function test_bkdf2() {
     });
 }
 
+function test_cofile() {
+    const pwd = lib.cofile.parseFilePath();
+    console.log(pwd);
+    console.log(process.cwd())
+    // console.log(process)
+}
+
+function test_colog() {
+    const logger = lib.colog.Logger('info');
+    logger.info('test logger');
+    lib.colog.bindConsole(logger);
+
+    console.log('log-data');
+    console.error('error-test');
+    console.info('info-test');
+    console.debug('debug-test');
+    console.trace('trace-test');
+    console.warn('warn-test');
+}
+
 
 test_bkdf2();
+test_cofile();
+test_colog();
