@@ -1,7 +1,19 @@
 .idea
 .git
-tmp
+.git*
+
+*/.idea/*
+*/.git/*
 */bak/*
+*/tmp/*
+
+tmp/
+build/
+test/
+test-browser/
+.travis.yml
+
+*.swp
 *.log
 
 

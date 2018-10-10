@@ -1,5 +1,4 @@
 const lib = require('./lib');
-const index = require('./index');
 const pbkdf2 = lib.pbkdf2;
 
 // used for testing
