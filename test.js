@@ -59,7 +59,7 @@ const test_api_exceptions = () => {
 }
 
 
-test_bkdf2();
-test_cofile();
-test_logging();
+// test_bkdf2();
+// test_cofile();
+// test_logging();
 test_api_exceptions()
