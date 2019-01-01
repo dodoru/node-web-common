@@ -39,7 +39,27 @@ function test_logging() {
     console.warn('warn-test');
 }
 
+const test_api_exceptions = () => {
+    // console.log(abort(40000))
+    const {abort, ApiError} = lib.api_exceptions;
+    console.log(ApiError.errnoMap)
+    try {
+        abort(40011)
+    } catch (e) {
+        console.log(e)
+        console.log(e.responseData())
+    }
+    ApiError.errnoMap = {40011: 'xxxx'}
+    console.log(ApiError.errnoMap)
+    try {
+        abort(40011)
+    } catch (e) {
+        console.log(e.responseData())
+    }
+}
+
 
 test_bkdf2();
 test_cofile();
 test_logging();
+test_api_exceptions()
