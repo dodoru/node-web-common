@@ -26,10 +26,10 @@ function test_cofile() {
     // console.log(process)
 }
 
-function test_colog() {
-    const logger = lib.colog.Logger('info');
+function test_logging() {
+    const logger = lib.logging.Logger('info');
     logger.info('test logger');
-    lib.colog.bindConsole(logger);
+    lib.logging.bindConsole(logger);
 
     console.log('log-data');
     console.error('error-test');
@@ -42,4 +42,4 @@ function test_colog() {
 
 test_bkdf2();
 test_cofile();
-test_colog();
+test_logging();
